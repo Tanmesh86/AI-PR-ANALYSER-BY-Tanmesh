@@ -38,7 +38,7 @@ class Dijkstra {
             System.out.println("To " + i + " -> " + (dist[i] == Integer.MAX_VALUE ? "INF" : dist[i]));
         }
     }
-
+Hey boi this is the test line for adddition
     public static void main(String[] args) {
         // Graph represented as adjacency list
         Map<Integer, List<Edge>> graph = new HashMap<>();
@@ -50,3 +50,4 @@ class Dijkstra {
         dijkstra(graph, 0);
     }
 }
+
