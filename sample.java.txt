@@ -1,16 +1,7 @@
 import java.util.*;
 
 class Dijkstra {
-    static class Edge {
-        int dest;
-        int weight;
-
-        Edge(int dest, int weight) {
-            this.dest = dest;
-            this.weight = weight;
-        }
-    }
-
+ 
     public static void dijkstra(Map<Integer, List<Edge>> graph, int start) {
         int n = graph.size();
 
@@ -18,7 +9,7 @@ class Dijkstra {
         int[] dist = new int[n];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[start] = 0;
-
+        console.log('hi');
         // Min-heap priority queue (stores [distance, node])
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
         pq.offer(new int[]{0, start});
@@ -47,7 +38,7 @@ class Dijkstra {
             System.out.println("To " + i + " -> " + (dist[i] == Integer.MAX_VALUE ? "INF" : dist[i]));
         }
     }
-
+Hey boi this is the test line for adddition
     public static void main(String[] args) {
         // Graph represented as adjacency list
         Map<Integer, List<Edge>> graph = new HashMap<>();
@@ -59,3 +50,5 @@ class Dijkstra {
         dijkstra(graph, 0);
     }
 }
+
+
